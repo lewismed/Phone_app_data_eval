@@ -79,14 +79,14 @@ if ((nameinput.value && numberinput.value&&emailinput.value )!=""){// if the inp
 	let contactrow=document.createElement("tr")
 
 
-  nameadd.innerText=nameinput.value;
-numberadd.innerText=numberinput.value;
-emailadd.innerText=email.value;
-emptyadd.innertext= "X"
+  nameadd.textContent=nameinput.value;
+numberadd.textContent=numberinput.value;
+emailadd.textContent=email.value;
+emptyadd.textContent= "X"
 
 console.log(nameadd)
 
-			//Adding Classes
+			//Adding in Classes 
 			emptyadd.classList.add('delete');
 		//	empty.classList.remove('delete');
 
@@ -99,7 +99,33 @@ console.log(nameadd)
 			//conatactrow.appendChild(emptyadd);
 			contact_list.appendChild(contactrow);
 
-}})}
+
+
+
+			nameinput.value = null;
+			numberinput.value = null;
+		emailinput.value = null;
+
+
+			
+
+
+		}
+	});
+}
+
+  
+      
+
+//}})}
+
+
+
+
+
+
+
+
 /*
 //loops through tables and rows to retrive the value
 function search() {
