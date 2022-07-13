@@ -9,6 +9,21 @@
     
     <link rel="stylesheet" type="text/css" href="style.css" />
    
+
+    <style>
+      table, th, td {
+        border: 1px solid;
+      }
+     
+      tr:nth-child(odd) {background: #f2f2f2FF}
+
+
+      .thead{background-color: white;
+
+      }
+      </style>
+
+
   </head>
   <body>
     <div class="header">Phone Directory <i class="fas fa-phone"></i></div>
@@ -23,7 +38,7 @@
       <!--Form To Add Users-->
       <div class="addEntry">
 
-show
+
         <form class="user_contact_form" method="post" id="useraddinfo">
 
 
@@ -95,7 +110,7 @@ show
           class="table-sortable"
           
         >
-          <thead class="filters">
+          <thead class="filters" style="background-color:white;text-align:center">
             <tr class="header">
               <th >
               Name
