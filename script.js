@@ -1,3 +1,42 @@
+/*console.log('Hello!');
+var tableContent = "";
+function  addcontent{//change
+for (index = 0; index < enteredStrings.length; index++) {
+    tableContent += "<tr><td>" + enteredStrings[index] + "</td>"
+
+    + "<td>" + enteredStringsTwo[index] + "</td></tr>";
+
+    nameCounter++;
+    total.innerHTML = "Total: " + nameCounter;
+}
+output.innerHTML = tableContent;
+}
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+
+function addcontact(){
+    let numberinput = document.getElementById("mobile").value;
+    let emailinput = document.getElementById("name").value;
+   let nameinput = document.getElementById("email").value;
+    const num=document.getElementById('mobile').innerHTML=numberinput ;
+    const email=document.getElementById('name').innerHTML=emailinput ;
+    const name=document.getElementById('email').innerHTML=nameinput ;
+    console.log(numberinput)
+    console.log(emailinput)
+    console.log(nameinput)
+
+
+}*/
+
+
+
+//import './style.css';
+
+// Write Javascript code!
+//const appDiv = document.getElementById('app');
+//appDiv.innerHTML = `<h1>JS Starter</h1>`;
 const btn = document.querySelector(".btnNav");
 btn.addEventListener('click', function (e) {
 	e.preventDefault();
@@ -31,7 +70,7 @@ btn.addEventListener('click', function (e) {
   console.log(nameinput)
   console.log(numberinput)
 
-
+//added
 if ((nameinput.value && numberinput.value&&emailinput.value )!=""){// if the input feild are not empty then I would like to add in a table datacell
   let nameadd=document.createElement("td")
   let numberadd=document.createElement("td")
@@ -61,7 +100,7 @@ console.log(nameadd)
 			contact_list.appendChild(contactrow);
 
 }})}
-
+/*
 //loops through tables and rows to retrive the value
 function search() {
   var td,inputvalue;
@@ -80,7 +119,42 @@ function search() {
 			inputvalue = td.textContent || td.inputvalue;
 			if (inputvalue.toUpperCase().indexOf(filterinfo) > -1) {
 				tag_name[i].style.display = "";
-			} else {tag_name[i].style.display = "none" ;
+			} else {tag_name[i].style.display = ;
 			}
 		} 
     }
+
+
+    function hide(){
+      if 
+    }
+
+ */
+function Search() {
+  // Declare variables
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("lookupInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("contact_table");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    if (!tr[i].classList.contains('header')) {
+      td = tr[i].getElementsByTagName("td"),
+      match = false;
+      for (j = 0; j < td.length; j++) {
+        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+          match = true;
+          break;
+        }
+      }
+      if (!match) {
+        tr[i].style.display = "none";
+      } else {
+        tr[i].style.display = "";
+      }
+    }
+  }
+}
+

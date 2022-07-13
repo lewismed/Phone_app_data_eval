@@ -80,8 +80,8 @@ show
 
       <input
         type="text"
-        id="mySearchInput"
-        onkeyup="searchFunction()"
+        id="lookupInput"
+        onkeyup="Search()"
         placeholder="Search for ..."
       />
 
@@ -95,15 +95,15 @@ show
           data-search="true"
         >
           <thead class="filters">
-            <tr>
-              <th data-field="id1" data-sortable="true" onclick="sortTable()">
-              Name// that worked
+            <tr class="header">
+              <th data-field="name_" data-sortable="true" onclick="sortTable()">
+              Name
                 <!-- <i class="fa fa-fw fa-sort"></i> -->
               </th>
               
-              <th data-field="id2">Phone No</th>
+              <th data-field="id2">Mobile</th>
               <th>Email</th>
-              <th></th>
+              <th>X</th>
             </tr>
           </thead>
           <tbody id="contact_table">
@@ -115,7 +115,6 @@ show
               <td class="delete">X</td>
             </tr>
 
-            
             <tr>
               <td>lewismed</td>
               <td>3406767920</td>
@@ -125,6 +124,7 @@ show
           </tbody>
         </table>
         <hr style="margin-top: 20px" />
+      <div id="noResult" class="noResult dn"> No Results Found</div>
       </div>
     </div>
   </body>
