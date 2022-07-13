@@ -38,14 +38,14 @@
       <!--Form To Add Users-->
       <div class="addEntry">
 
-
+show
         <form class="user_contact_form" method="post" id="useraddinfo">
 
 
           <div class="formg">
             Contact Name :
             <input
-              class="form-el"
+              class="form-contacts"
               type="text"
               name="Name"
               id="name"
@@ -57,7 +57,7 @@
           <div class="formg">
             Mobile Number :
             <input
-              class="form-el"
+              class="form-contacts"
               type="tel"
               name="Number"
               id="number"
@@ -69,7 +69,7 @@
           <div class="formg">
             Email :
             <input
-              class="form-el"
+              class="form-contacts"
               type="email"
               name="Email"
               id="email"
@@ -87,11 +87,11 @@
           />
         </form>
 
-        
+        <p class="alert"></p>
         <hr style="margin-top: 20px" />
       </div>
 
-      <!-- ------where to look for different numbers: -->
+      <!-- ------Search contact by Mobile No: -->
 
       <input
         type="text"
@@ -100,17 +100,20 @@
         placeholder="Search for ..."
       />
 
-      <!--sample Table Registered Users-->
+      <!--Table Showing Registered Users-->
       <hr style="margin-top: 15px" />
-      
+      <div class="showEntry">
 
 
-        
+       
+
         <table
           class="table-sortable"
           
         >
           <thead class="filters" style="background-color:white;text-align:center">
+            <th></th>
+            <th>contact summary</th>
             <tr class="header">
               <th >
               Name
