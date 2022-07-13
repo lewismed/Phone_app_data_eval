@@ -70,29 +70,81 @@ btn.addEventListener('click', function (e) {
   console.log(nameinput)
   console.log(numberinput)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(numberinput)
+
+
+  
 //added
 if ((nameinput.value && numberinput.value&&emailinput.value )!=""){// if the input feild are not empty then I would like to add in a table datacell
   let nameadd=document.createElement("td")
   let numberadd=document.createElement("td")
   let emailadd=document.createElement("td")
-  let emptyadd=document.createElement("td")
+ // let emptyadd=document.createElement("td")
 	let contactrow=document.createElement("tr")
 
 
   nameadd.textContent=nameinput.value;
 numberadd.textContent=numberinput.value;
 emailadd.textContent=email.value;
-emptyadd.textContent= "X"
+//emptyadd.textContent= "X"
+
+//valdations on html and javscript
+
+function Checkvalidity(nameadd,numberadd, emailadd){
+  nameadd=nameadd
+  numberadd=numberadd
+  emailadd=emailadd
+  let valid_name= new RegExp("(?=^.{0,20}$)^([a-zA-Z ]+)$");
+  let valid_num=new RegExp("(?=^.{10}$)^([0-9]+)$");
+  let valid_email=new RegExp("(?=^.{0,40}$)^([a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3})$");
+if (valid_name.test(nameadd )==true){
+  return true
+
+}
+if (!valid_num.test(numberadd)==true){
+return true
+
+
+}
+if (!valid_email.test(emailadd)==true){
+  return true
+}
+
+return false;
+}
+
+let valid=Checkvalidity()
+console.log(valid)
+
 
 console.log(nameadd)
 
-			//Adding in Classes 
-			emptyadd.classList.add('delete');
+			//Adding Classes
+		//	emptyadd.classList.add('delete');
 		//	empty.classList.remove('delete');
 
-
+console.log(numberadd)
 //add to table
 			//Adding to table
+
+
+if (valid==true){    
 			contactrow.appendChild(nameadd);
 			contactrow.appendChild(numberadd);
 			contactrow.appendChild(emailadd);
@@ -106,7 +158,7 @@ console.log(nameadd)
 			numberinput.value = null;
 		emailinput.value = null;
 
-
+}
 			
 
 
@@ -176,6 +228,7 @@ function Search() {
         }
       }
       if (!match) {
+        var noresult=
         tr[i].style.display = "none";
       } else {
         tr[i].style.display = "";
@@ -183,6 +236,10 @@ function Search() {
     }
   }
 }
+
+
+
+
 
 function sortTableByColumn(table, column, asc = true) {
   const dirModifier = asc ? 1 : -1;
