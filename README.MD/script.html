@@ -88,22 +88,23 @@ show
       <!--Table Showing Registered Users-->
       <hr style="margin-top: 15px" />
       <div class="showEntry">
+
+
+        
         <table
-          class="table"
-          id="myTable"
-          data-toggle="table"
-          data-search="true"
+          class="table-sortable"
+          
         >
           <thead class="filters">
             <tr class="header">
-              <th data-field="name_" data-sortable="true" onclick="sortTable()">
+              <th >
               Name
                 <!-- <i class="fa fa-fw fa-sort"></i> -->
               </th>
               
               <th data-field="id2">Mobile</th>
               <th>Email</th>
-              <th>X</th>
+              
             </tr>
           </thead>
           <tbody id="contact_table">
@@ -112,17 +113,23 @@ show
               <td>Admin</td>
               <td>1234567890</td>
               <td>test@test</td>
-              <td class="delete">X</td>
+              
             </tr>
 
             <tr>
               <td>lewismed</td>
               <td>3406767920</td>
               <td>lewismed@gmail.com</td>
-              <td class="delete">X</td>
+              
             </tr>
           </tbody>
         </table>
+
+
+
+
+
+
         <hr style="margin-top: 20px" />
       <div id="noResult" class="noResult dn"> No Results Found</div>
       </div>
