@@ -1,42 +1,4 @@
-/*console.log('Hello!');
-var tableContent = "";
-function  addcontent{//change
-for (index = 0; index < enteredStrings.length; index++) {
-    tableContent += "<tr><td>" + enteredStrings[index] + "</td>"
 
-    + "<td>" + enteredStringsTwo[index] + "</td></tr>";
-
-    nameCounter++;
-    total.innerHTML = "Total: " + nameCounter;
-}
-output.innerHTML = tableContent;
-}
-
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Hello World";
-}
-
-function addcontact(){
-    let numberinput = document.getElementById("mobile").value;
-    let emailinput = document.getElementById("name").value;
-   let nameinput = document.getElementById("email").value;
-    const num=document.getElementById('mobile').innerHTML=numberinput ;
-    const email=document.getElementById('name').innerHTML=emailinput ;
-    const name=document.getElementById('email').innerHTML=nameinput ;
-    console.log(numberinput)
-    console.log(emailinput)
-    console.log(nameinput)
-
-
-}*/
-
-
-
-//import './style.css';
-
-// Write Javascript code!
-//const appDiv = document.getElementById('app');
-//appDiv.innerHTML = `<h1>JS Starter</h1>`;
 const btn = document.querySelector(".btnNav");
 btn.addEventListener('click', function (e) {
 	e.preventDefault();
@@ -52,8 +14,6 @@ btn.addEventListener('click', function (e) {
 
 
   const contact_list = document.querySelector("#contact_table");
-
-
 
 
 
@@ -129,26 +89,24 @@ if (!valid_email.test(emailadd)==true){
 return false;
 }
 
-let valid=Checkvalidity()
+let valid=Checkvalidity()//check if its valid through java and html
 console.log(valid)
 
 
 console.log(nameadd)
 
-			//Adding Classes
-		//	emptyadd.classList.add('delete');
-		//	empty.classList.remove('delete');
+
 
 console.log(numberadd)
 //add to table
 			//Adding to table
 
-
+// if valid add table
 if (valid==true){    
 			contactrow.appendChild(nameadd);
 			contactrow.appendChild(numberadd);
 			contactrow.appendChild(emailadd);
-			//conatactrow.appendChild(emptyadd);
+			
 			contact_list.appendChild(contactrow);
 
 
@@ -169,45 +127,11 @@ if (valid==true){
   
       
 
-//}})}
+/
 
 
 
-
-
-
-
-
-/*
-//loops through tables and rows to retrive the value
-function search() {
-  var td,inputvalue;
-    var search=document.getElementById("lookupInput")
-    //console.log(search)
-    var filterinfo=search.value.toUpperCase()
-    var contact_table=document.getElementById("contact_table")
-    var tag_name=contact_table.getElementsByTagName("tr")
-      console.log(tag_name)
-      console.log(contact_table)
-    for (let i=0;i>tag_name.length;i++)
-    
-     td = tr[i].getElementsByTagName("td")[0];
-    console.log(td)
-		if (td) {
-			inputvalue = td.textContent || td.inputvalue;
-			if (inputvalue.toUpperCase().indexOf(filterinfo) > -1) {
-				tag_name[i].style.display = "";
-			} else {tag_name[i].style.display = ;
-			}
-		} 
-    }
-
-
-    function hide(){
-      if 
-    }
-
- */
+//this is for the search function
 function Search() {
   // Declare variables
   var input, filter, table, tr, td, i;
@@ -237,6 +161,7 @@ function Search() {
   }
 }
 
+//this is for sorting
 
 
 
@@ -245,6 +170,8 @@ function sortTableByColumn(table, column, asc = true) {
   const dirModifier = asc ? 1 : -1;
   const tBody = table.tBodies[0];
   const rows = Array.from(tBody.querySelectorAll("tr"));
+
+
 
   // Sort each row
   const sortedRows = rows.sort((a, b) => {
