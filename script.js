@@ -61,3 +61,26 @@ console.log(nameadd)
 			contact_list.appendChild(contactrow);
 
 }})}
+
+//loops through tables and rows to retrive the value
+function search() {
+  var td,inputvalue;
+    var search=document.getElementById("lookupInput")
+    //console.log(search)
+    var filterinfo=search.value.toUpperCase()
+    var contact_table=document.getElementById("contact_table")
+    var tag_name=contact_table.getElementsByTagName("tr")
+      console.log(tag_name)
+      console.log(contact_table)
+    for (let i=0;i>tag_name.length;i++)
+    
+     td = tr[i].getElementsByTagName("td")[0];
+    console.log(td)
+		if (td) {
+			inputvalue = td.textContent || td.inputvalue;
+			if (inputvalue.toUpperCase().indexOf(filterinfo) > -1) {
+				tag_name[i].style.display = "";
+			} else {tag_name[i].style.display = "none" ;
+			}
+		} 
+    }
