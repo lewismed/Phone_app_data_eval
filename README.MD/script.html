@@ -2,7 +2,10 @@
 <html>
   <head>
     <title>Phone Directory</title>
-  
+
+    <link 
+
+    />
     
     <link rel="stylesheet" type="text/css" href="style.css" />
    
@@ -35,7 +38,12 @@
       <!--Form To Add Users-->
       <div class="addEntry">
 
-show
+      <div class="showdiv" id="error" style="visibility:hidden;height:150px; width:250px; background-color: red ;">
+      error
+      
+      </div>
+      
+      >
         <form class="user_contact_form" method="post" id="useraddinfo">
 
 
@@ -54,7 +62,7 @@ show
           <div class="formg">
             Mobile Number :
             <input
-              class="form-contacts"
+              class="form-formcontacts"
               type="tel"
               name="Number"
               id="number"
@@ -96,22 +104,21 @@ show
         onkeyup="Search()"
         placeholder="Search for ..."
       />
-
+    <div id="#NoSearchFound"></div>
       <!--Table Showing Registered Users-->
       <hr style="margin-top: 15px" />
       <div class="showEntry">
 
 
-       
+       lookupInput
 
         <table
           class="table-sortable"
           
         >
           <thead class="filters" style="background-color:white;text-align:center">
-            <th style="background-color:white;text-align:center"></th>
-            <th style="background-color:white;text-align:center">contact summary</th>
-            <th style="background-color:white;text-align:center"></th>
+            
+            <h3>contact summary</h3>
             <tr class="header">
               <th >
               Name
