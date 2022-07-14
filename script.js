@@ -55,7 +55,7 @@ if ((nameinput.value && numberinput.value&&emailinput.value )!=""){// if the inp
   let nameadd=document.createElement("td")
   let numberadd=document.createElement("td")
   let emailadd=document.createElement("td")
- // let emptyadd=document.createElement("td")
+ 
 	let contactrow=document.createElement("tr")
 
 
@@ -99,8 +99,7 @@ console.log(nameadd)
 
 console.log(numberadd)
 //add to table
-			//Adding to table
-
+			//Adding new  table in
 // if valid add table
 if (valid==true){    
 			contactrow.appendChild(nameadd);
