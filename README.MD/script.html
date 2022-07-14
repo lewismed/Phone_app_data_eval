@@ -28,15 +28,7 @@
   <body>
     <div class="header">Phone Directory <i class="fas fa-phone"></i></div>
 
-    <div class="container">
-      <!-- <a href="#"><button class="btn cent btnNav">Add A New Entry</button></a> -->
-
-      <button class="btn cent btnNav hidden"></button>
-
-      <hr style="margin-top: 15px" />
-
-      <!--Form To Add Users-->
-      <div class="addEntry">
+    
 
       <div class="showdiv" id="error" style="visibility:hidden;height:150px; width:250px; background-color: red ;">
       error
@@ -54,9 +46,8 @@
               type="text"
               name="Name"
               id="name"
-              placeholder="Name"
-              pattern="[A-Za-z\s]{1,15}"
-            />btnnav
+              placeholder="Name">
+             
           </div>
 
           <div class="formg">
@@ -67,7 +58,7 @@
               name="Number"
               id="number"
               placeholder="Phone Number"
-              pattern="[0-9]{10}"
+              
             />
           </div>
 
@@ -79,7 +70,7 @@
               name="Email"
               id="email"
               placeholder="Email"
-              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}${0,40}"
+              
             />
           </div>
 
