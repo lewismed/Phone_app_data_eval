@@ -2,6 +2,7 @@
 
 
 
+
   const useraddinfo = document.querySelector("#useraddinfo");
 
 
@@ -47,7 +48,7 @@ if ((nameinput.value && numberinput.value&&emailinput.value )!=""){// if the inp
   let nameadd=document.createElement("td")
   let numberadd=document.createElement("td")
   let emailadd=document.createElement("td")
- 
+ // let emptyadd=document.createElement("td")
 	let contactrow=document.createElement("tr")
 
 
@@ -62,25 +63,23 @@ function Checkvalidity(nameadd,numberadd, emailadd){
   nameadd=nameadd
   numberadd=numberadd
   emailadd=emailadd
-
-  
   let valid_name= new RegExp("(?=^.{0,20}$)^([a-zA-Z ]+)$");
   let valid_num=new RegExp("(?=^.{10}$)^([0-9]+)$");
   let valid_email=new RegExp("(?=^.{0,40}$)^([a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3})$");
-if (valid_name.test(nameadd )){
-  return false
+if (valid_name.test(nameadd )==true){
+  return true
 
 }
-if (!valid_num.test(numberadd)){
-return false
+if (!valid_num.test(numberadd)==true){
+return true
 
 
 }
-if (!valid_email.test(emailadd)){
-  return false
+if (!valid_email.test(emailadd)==true){
+  return true
 }
 
-return true;
+return false;
 }
 
 let valid=Checkvalidity()//check if its valid through java and html
@@ -93,7 +92,8 @@ console.log(nameadd)
 
 console.log(numberadd)
 //add to table
-			//Adding new  table in
+			//Adding to table
+
 // if valid add table
 if (valid==true){    
 			contactrow.appendChild(nameadd);
