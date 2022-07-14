@@ -1,12 +1,4 @@
 
-const btn = document.querySelector(".btnNav");
-btn.addEventListener('click', function (e) {
-	e.preventDefault();
-
-})
-
-	const data = document.querySelector(".showEntry");
-	const entry = document.querySelector(".addEntry");
 
 
 
@@ -70,6 +62,8 @@ function Checkvalidity(nameadd,numberadd, emailadd){
   nameadd=nameadd
   numberadd=numberadd
   emailadd=emailadd
+
+  
   let valid_name= new RegExp("(?=^.{0,20}$)^([a-zA-Z ]+)$");
   let valid_num=new RegExp("(?=^.{10}$)^([0-9]+)$");
   let valid_email=new RegExp("(?=^.{0,40}$)^([a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3})$");
