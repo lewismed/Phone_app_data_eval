@@ -67,20 +67,20 @@ function Checkvalidity(nameadd,numberadd, emailadd){
   let valid_name= new RegExp("(?=^.{0,20}$)^([a-zA-Z ]+)$");
   let valid_num=new RegExp("(?=^.{10}$)^([0-9]+)$");
   let valid_email=new RegExp("(?=^.{0,40}$)^([a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,3})$");
-if (valid_name.test(nameadd )==true){
-  return true
+if (valid_name.test(nameadd ){
+  return false
 
 }
 if (!valid_num.test(numberadd)==true){
-return true
+return false
 
 
 }
 if (!valid_email.test(emailadd)==true){
-  return true
+  return false
 }
 
-return false;
+return true;
 }
 
 let valid=Checkvalidity()//check if its valid through java and html
