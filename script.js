@@ -127,7 +127,7 @@ if (valid==true){
   
       
 
-/
+
 
 
 
@@ -154,6 +154,8 @@ function Search() {
       if (!match) {
         var noresult=
         tr[i].style.display = "none";
+
+        
       } else {
         tr[i].style.display = "";
       }
