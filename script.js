@@ -1,8 +1,5 @@
 
 
-
-
-
   const useraddinfo = document.querySelector("#useraddinfo");
 
 
@@ -124,10 +121,17 @@ if (valid==true){
 
 
 
-//this is for the search function
+
+
+
+
+
+
+
+
 function Search() {
   // Declare variables
-  var input, filter, table, tr, td, i;
+  var input, filter, table, tr, td, i,newtd;
   input = document.getElementById("lookupInput");
   filter = input.value.toUpperCase();
   table = document.getElementById("contact_table");
@@ -136,27 +140,39 @@ function Search() {
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
     if (!tr[i].classList.contains('header')) {
-      td = tr[i].getElementsByTagName("td"),
-      match = false;
-      for (j = 0; j < td.length; j++) {
-        if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
-          match = true;
-          break;
-        }
-      }
-      if (!match) {
-        var noresult=
-        tr[i].style.display = "none";
-
+      (td = tr[i].getElementsByTagName('td')[1]), (match = false)
+      console.log(td)
+      if (td){
+        numberval=td.textContent|| td.innerText
+        if(numberval.indexOf(filter)>-1){
+          tr[i].style.display="";
+          
+        }  
+          else{
+            tr[i].style.display="none"// this will hide the conetnt if nothing is found
+            document.querySelector("#noResult").textContent="No search found"// if this is true it will add in this in on the element
         
-      } else {
-        tr[i].style.display = "";
-      }
-    }
-  }
-}
+          }}else{
+            document.querySelector("#noResult").textContent="No search found"
+        
+          }
+        
+        }
+        } 
 
-//this is for sorting
+        }
+      
+
+
+
+
+
+
+
+
+
+
+
 
 
 
