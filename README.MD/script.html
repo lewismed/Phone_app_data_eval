@@ -3,9 +3,6 @@
   <head>
     <title>Phone Directory</title>
 
-    <link 
-
-    />
     
     <link rel="stylesheet" type="text/css" href="style.css" />
    
@@ -35,7 +32,7 @@
       
       </div>
       
-      
+    
         <form class="user_contact_form" method="post" id="useraddinfo">
 
 
@@ -90,10 +87,10 @@
       <!-- ------Search contact by Mobile No: -->
 
       <input
-        type="text"
+        type="number"
         id="lookupInput"
         onkeyup="Search()"
-        placeholder="Search for ..."
+        placeholder="Search for"
       />
     <div id="#NoSearchFound"></div>
       <!--Table Showing Registered Users-->
@@ -107,19 +104,19 @@
           class="table-sortable"
           
         >
-          <thead class="filters" style="background-color:white;text-align:center">
+          <thead class="filters" class="header" style="background-color:white;text-align:center">
             
             <h3>contact summary</h3>
             <tr class="header">
-              <th >
+              <th style="background-color:white;text-align:center">
               Name
                 <!-- <i class="fa fa-fw fa-sort"></i> -->
               </th>
               
-              <th data-field="id2">Mobile</th>
-              <th>Email</th>
-              header
-            </tr>
+              <th style="background-color:white;text-align:center">Mobile</th>
+              <th style="background-color:white;text-align:center">Email</th>
+              
+            
           </thead>
           <tbody id="contact_table">
             <!-- Sample contacts-->
@@ -145,8 +142,8 @@
 
 
         <hr style="margin-top: 20px" />
-      <div id="noResult" class="noResult dn"> No Results Found</div>
-
+        <p id="message"></p>
+      <div id="noResult" class="noResult dn"> </div>
       </div>
     </div>
   </body>
